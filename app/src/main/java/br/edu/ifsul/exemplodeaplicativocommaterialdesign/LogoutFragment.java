@@ -61,9 +61,15 @@ public class LogoutFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
+        requireContext()
+                .getSharedPreferences("AppPrefs", requireContext().MODE_PRIVATE)
+                .edit()
+                .clear()
+                .apply();
+
         Intent it = new Intent(getActivity(), LoginMainActivity.class);
+        it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(it);
-        getActivity().finish();
 
         return inflater.inflate(R.layout.fragment_logout, container, false);
     }

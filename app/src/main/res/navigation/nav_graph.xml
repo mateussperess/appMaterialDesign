@@ -19,4 +19,9 @@
         android:name="br.edu.ifsul.exemplodeaplicativocommaterialdesign.LogoutFragment"
         android:label="fragment_logout"
         tools:layout="@layout/fragment_logout" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="br.edu.ifsul.exemplodeaplicativocommaterialdesign.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settingsFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsFragment">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="Alterar Senha"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etSenhaAtual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Informe a senha atual"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+    <EditText
+        android:id="@+id/etNovaSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Informe a nova senha"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/etSenhaAtual"
+        app:layout_constraintStart_toStartOf="@+id/etSenhaAtual"
+        app:layout_constraintTop_toBottomOf="@+id/etSenhaAtual" />
+
+    <EditText
+        android:id="@+id/etConfirmarSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Confirme a nova senha"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/etNovaSenha"
+        app:layout_constraintStart_toStartOf="@+id/etNovaSenha"
+        app:layout_constraintTop_toBottomOf="@+id/etNovaSenha" />
+
+    <Button
+        android:id="@+id/btnSalvarSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Salvar Nova Senha"
+        app:layout_constraintEnd_toEndOf="@+id/etConfirmarSenha"
+        app:layout_constraintStart_toStartOf="@+id/etConfirmarSenha"
+        app:layout_constraintTop_toBottomOf="@+id/etConfirmarSenha" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

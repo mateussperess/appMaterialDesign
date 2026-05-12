@@ -2,12 +2,17 @@ package br.edu.ifsul.exemplodeaplicativocommaterialdesign.webservices;
 
 import java.util.List;
 
+import br.edu.ifsul.exemplodeaplicativocommaterialdesign.modelo.AlterarSenhaRequest;
+import br.edu.ifsul.exemplodeaplicativocommaterialdesign.modelo.LoginRequest;
+import br.edu.ifsul.exemplodeaplicativocommaterialdesign.modelo.LoginResponse;
 import br.edu.ifsul.exemplodeaplicativocommaterialdesign.modelo.Produto;
+import br.edu.ifsul.exemplodeaplicativocommaterialdesign.modelo.Usuario;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
+import retrofit2.http.PATCH;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Query;
@@ -35,5 +40,14 @@ public interface Api {
 
     @DELETE("produto.php")
     Call<Produto> deleteProduct(@Query("id") int productId);
+
+    @POST("usuario.php")
+    Call<Usuario> createUser(@Body Usuario usuario);
+
+    @POST("login.php")
+    Call<LoginResponse> login(@Body LoginRequest loginRequest);
+
+    @PATCH("usuario.php")
+    Call<Usuario> updatePassword(@Body AlterarSenhaRequest request);
 }
 

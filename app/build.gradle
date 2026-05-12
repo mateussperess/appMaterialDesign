@@ -39,6 +39,8 @@ dependencies {
     implementation libs.material
     implementation libs.navigation.ui
     implementation libs.navigation.fragment
+    implementation libs.activity
+    implementation libs.preference
     testImplementation libs.junit
     androidTestImplementation libs.espresso.core
     androidTestImplementation libs.ext.junit

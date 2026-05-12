@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginMainActivity">
+
+    <EditText
+        android:id="@+id/etCriarEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etCriarNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Primeiro Nome"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/etCriarEmail"
+        app:layout_constraintStart_toStartOf="@+id/etCriarEmail"
+        app:layout_constraintTop_toBottomOf="@+id/etCriarEmail" />
+
+    <EditText
+        android:id="@+id/etCriarSobreNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Sobrenome"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/etCriarNome"
+        app:layout_constraintStart_toStartOf="@+id/etCriarNome"
+        app:layout_constraintTop_toBottomOf="@+id/etCriarNome" />
+
+    <EditText
+        android:id="@+id/etCriarSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/etCriarSobreNome"
+        app:layout_constraintStart_toStartOf="@+id/etCriarSobreNome"
+        app:layout_constraintTop_toBottomOf="@+id/etCriarSobreNome" />
+
+    <Button
+        android:id="@+id/btnCriarConta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Criar Conta"
+        app:layout_constraintEnd_toEndOf="@+id/etCriarSenha"
+        app:layout_constraintStart_toStartOf="@+id/etCriarSenha"
+        app:layout_constraintTop_toBottomOf="@+id/etCriarSenha" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
