@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_contatos"
+    app:startDestination="@id/nav_products">
+    <fragment
+        android:id="@+id/nav_products"
+        android:name="br.edu.ifsul.exemplodeaplicativocommaterialdesign.ProductListFragment"
+        android:label="fragment_product_list"
+        tools:layout="@layout/fragment_product_list" />
+    <fragment
+        android:id="@+id/nav_agenda"
+        android:name="br.edu.ifsul.exemplodeaplicativocommaterialdesign.AgendaListFragment"
+        android:label="fragment_agenda_list"
+        tools:layout="@layout/fragment_agenda_list" />
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="br.edu.ifsul.exemplodeaplicativocommaterialdesign.LogoutFragment"
+        android:label="fragment_logout"
+        tools:layout="@layout/fragment_logout" />
+</navigation>
