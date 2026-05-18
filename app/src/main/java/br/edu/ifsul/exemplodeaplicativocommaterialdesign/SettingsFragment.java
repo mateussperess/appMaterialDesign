@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -120,7 +121,7 @@ public class SettingsFragment extends Fragment {
                         .enqueue(new Callback<Usuario>() {
                             @Override
                             public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                                if (response.isSuccessful() && response.body() != null) {
+                                if (response.isSuccessful()) {
                                     Toast.makeText(getContext(), "Senha alterada com sucesso!", Toast.LENGTH_SHORT).show();
                                 } else {
                                     Toast.makeText(getContext(), "Senha atual incorreta.", Toast.LENGTH_SHORT).show();

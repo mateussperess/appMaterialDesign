@@ -18,7 +18,8 @@ import retrofit2.http.PUT;
 import retrofit2.http.Query;
 
 public interface Api {
-    String BASE_URL = "http://192.168.2.190/ws_aula/";
+//    String BASE_URL = "http://192.168.2.190/ws_aula/";
+    String BASE_URL = "http://192.168.237.0/ws_aula/";
 
 
     // rotas RESTFUL para produto

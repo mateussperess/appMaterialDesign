@@ -78,7 +78,6 @@ public class LoginMainActivity extends AppCompatActivity {
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     if (response.body().isSuccess()) {
-                        // Login OK — salva nas SharedPreferences e vai para a MainActivity
                         SharedPreferences.Editor editor = getSharedPreferences("AppPrefs", MODE_PRIVATE).edit();
                         editor.putBoolean("estaLogado", true);
                         editor.putString("emailLogado", email);

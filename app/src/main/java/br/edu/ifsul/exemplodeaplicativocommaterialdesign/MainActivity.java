@@ -13,7 +13,9 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -77,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         profilePicture.setImageResource(R.drawable.ic_default_profile_picture); // You'll need to create this drawable
 
         // Set a generic name
-        userName.setText("Usuário Genérico");
+        SharedPreferences prefs = getApplicationContext().getSharedPreferences("AppPrefs", Context.MODE_PRIVATE);
+        userName.setText(prefs.getString("emailLogado", "Usuário"));
     }
 }
